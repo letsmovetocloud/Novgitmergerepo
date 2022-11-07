@@ -11,7 +11,8 @@ terraform {
 # Provider Block
 provider "aws" {
   profile = "default" 
-  region  = "ap-south-1"
+
+  region  = "us-west-1"
 }
 
 #Resource Block
@@ -30,7 +31,7 @@ module "vpc" {
   # VPC Basic Details
   name = "vpc-dev"
   cidr = "192.168.0.0/16"   
-  azs                 = ["ap-south-1a"]
+  azs                 = ["us-west-1a"]
   private_subnets     = ["192.168.1.0/24"]
   public_subnets      = ["192.168.101.0/24"]
 
